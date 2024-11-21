@@ -4,20 +4,17 @@ layout: homepage
 
 ## About Me
 
-I am a Ph.D. student at ...
+I am currently an third-year undergruduate at [Tsinghua University](https://www.tsinghua.edu.cn/en/), pursuing a degree in Information and Computing Science.
 
-## Research Interests
+In the summer of 2023, I joined [THUML](https://github.com/thuml) under the supervision of [Prof. Mingsheng Long](http://ise.thss.tsinghua.edu.cn/~mlong/). In the summer of 2024, I began a research internship at [Lecar Lab](https://lecar-lab.github.io/), under the guidance of [Prof. Guanya Shi](https://www.gshi.me/).
 
-- **Computer Vision:** image recognition, image generation, video captioning
-- **Machine Learning:** meta-learning, incremental learning, transfer learning
+My research aims to develop general algorithms that empower agents to learn efficiently in sequential, interactive, and dynamic environments. Currently, I am particularly excited about exploring effective deep learning methods for general-purpose world modeling.
 
 ## News
 
-- **[Feb. 2020]** Our paper about incremental learning is accepted to CVPR 2020.
-- **[Feb. 2020]** We will host the ACM Multimedia Asia 2020 conference in Singapore!
-- **[Sept. 2019]** Our paper about few-shot learning is accepted to NeurIPS 2019.
-- **[Mar. 2019]** Our paper about few-shot learning is accepted to CVPR 2019.
+- **[Sept. 2024]** 🌏 [iVideoGPT](https://thuml.github.io/iVideoGPT/)is accepted by NeurIPS 2024!
+- **[May. 2024]** I became a member of 'Sparking Program', the most prestigious and selective academic organization for students at Tsinghua University.
 
 {% include_relative _includes/publications.md %}
 
-{% include_relative _includes/services.md %}
+<!-- {% include_relative _includes/services.md %} -->
