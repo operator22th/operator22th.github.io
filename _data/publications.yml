@@ -4,7 +4,7 @@ main:
     authors: Jialong Wu*, <strong>Shaofeng Yin*</strong>, Ningya Feng, Xu He, Dong Li, Jianye Hao, Mingsheng Long
     conference_short: Neurlps
     conference: Conference on Neural Information Processing Systems <strong>(Neurlps)</strong>, 2024.
-    arXiv: https://arxiv.org/pdf/2405.15223.pdf
-    Code: https://github.com/thuml/iVideoGPT
+    pdf: https://arxiv.org/pdf/2405.15223.pdf
+    code: https://github.com/thuml/iVideoGPT
     page: https://thuml.github.io/iVideoGPT/
     image: ./assets/pub/nips2024_ivideogpt/ivideogpt.png
