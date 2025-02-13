@@ -1,9 +1,9 @@
 main:
   - title: "LeCAR Lab, CMU Robotics Institute"
     image: ./assets/exp/lecar.png
-    description: "Visiting Researcher\nJuly - Aug. 2024"
+    description: "Visiting Researcher\\July - Aug. 2024"
     page: https://lecar-lab.github.io/
   - title: "THUML, Tsinghua University"
     image: ./assets/exp/thuml.png
-    description: "Research Assistant\nSept. 2023 - Now"
+    description: "Research Assistant\\Sept. 2023 - Now"
     page: https://github.com/thuml
