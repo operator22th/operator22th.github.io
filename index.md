@@ -11,10 +11,10 @@ In the summer of 2023, I joined [THUML](https://github.com/thuml) under the supe
 My research aims to develop general algorithms that empower agents to learn efficiently in sequential, interactive, and dynamic environments. Currently, I am particularly excited about exploring effective deep learning methods for physical scene understanding and general-purpose world modeling.
 
 ## News
-- **[Dec. 2024]** Honored to receive Grand Prize (Top Award) in Student Academic Training Program, Tsinghua University (5/1852).
-- **[Dec. 2024]** Honored to receive Outstanding Poster Award in Student Academic Research Advancement Program of Tsinghua University (36/357).
-- **[Sept. 2024]** 🌏 [iVideoGPT](https://thuml.github.io/iVideoGPT/) is accepted by NeurIPS 2024!
-- **[May. 2024]** I became a member of 'Sparking Program', the most prestigious and selective academic organization for students at Tsinghua University (top 1% in university).
+- **[Dec. 2024]** Honored to receive **Grand Prize (Top Award)** in Student Academic Training Program, Tsinghua University **(5/1852)**.
+- **[Dec. 2024]** Honored to receive **Outstanding Poster Award** in Student Academic Research Advancement Program of Tsinghua University **(36/357)**.
+- **[Sept. 2024]** 🌏 [iVideoGPT](https://thuml.github.io/iVideoGPT/) is accepted by **NeurIPS 2024**!
+- **[May. 2024]** I became a member of 'Sparking Program', the most prestigious and selective academic organization for students at Tsinghua University **(top 1% in university)**.
 
 {% include_relative _includes/publications.md %}
 
