@@ -20,6 +20,7 @@
       {% if link.description %} 
       <div class="description">
       {{ link.description }}
+      {% endif %}
       {% if link.time %} 
       <div class="time">
       {{ link.time }}
