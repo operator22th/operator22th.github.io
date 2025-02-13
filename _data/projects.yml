@@ -1,0 +1,10 @@
+main:
+  - title: "RISC-V Pipeline Processor"
+    image: ./assets/proj/riscv.png
+    description: "A five-stage pipelined RISC-V 32-bit processor featuring interrupt and exception handling, user-mode virtual address translation via page tables, and performance enhancements through I-Cache, D-Cache (Writeback), and TLB, with additional support for peripherals such as VGA and Flash."
+    pdf: ./assets/proj/riscv.pdf
+  - title: "Path-Tracing Renderer"
+    image: ./assets/exp/tinynee.png
+    description: "A compact renderer featuring Next Event Estimation, supporting Glossy Material (Disney Principal BRDF), Texture Mapping, Normal Mapping, Motion Blur, Normal Interpolation, Depth of Field, and Mesh Rendering (accelerated with BVH)."
+    pdf: ./assets/proj/tinynee.pdf
+    code: https://github.com/operator22th/tinynee

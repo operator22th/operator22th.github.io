@@ -20,6 +20,8 @@ My research aims to develop general algorithms that empower agents to learn effi
 
 {% include_relative _includes/experience.md %}
 
+{% include_relative _includes/projects.md %}
+
 ## Education
 
 - **B.S. in Information and Computing Science**, Tsinghua University, 2022-2026 (_expected_)\\
