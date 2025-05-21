@@ -1,9 +1,19 @@
 main:
+  - title: "RLVR-World: Training World Models with Reinforcement Learning"
+    authors: Jialong Wu, <strong>Shaofeng Yin</strong>, Ningya Feng, Mingsheng Long
+    conference_short: arXiv
+    conference: arXiv preprint, 2025.
+    arxiv: https://arxiv.org/abs/2505.13934
+    pdf: https://arxiv.org/pdf/2505.13934
+    code: https://github.com/thuml/RLVR-World
+    image: ./assets/pub/arxiv2025_rlvr-world/rlvr_world.png
+
   - title: "Trajectory World Models for Heterogeneous Environments"
     authors: <strong>Shaofeng Yin*</strong>, Jialong Wu*, Siqiao Huang, Xingjian Su, Xu He, Jianye Hao, Mingsheng Long
     conference_short: ICML
     conference: International Conference on Machine Learning (<strong>ICML</strong>), 2025.
-    pdf: https://arxiv.org/abs/2502.01366
+    arxiv: https://arxiv.org/abs/2502.01366
+    pdf: https://arxiv.org/pdf/2502.01366
     image: ./assets/pub/arxiv2025_trajworld/trajworld.png
 
   - title: "iVideoGPT: Interactive VideoGPTs are Scalable World Models"
