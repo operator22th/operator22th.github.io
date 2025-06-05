@@ -6,6 +6,7 @@ main:
     arxiv: https://arxiv.org/abs/2505.13934
     pdf: https://arxiv.org/pdf/2505.13934
     code: https://github.com/thuml/RLVR-World
+    page: https://thuml.github.io/RLVR-World/
     image: ./assets/pub/arxiv2025_rlvr-world/rlvr_world.png
 
   - title: "Trajectory World Models for Heterogeneous Environments"
@@ -14,6 +15,7 @@ main:
     conference: International Conference on Machine Learning (<strong>ICML</strong>), 2025.
     arxiv: https://arxiv.org/abs/2502.01366
     pdf: https://arxiv.org/pdf/2502.01366
+    code: https://github.com/thuml/TrajWorld
     image: ./assets/pub/arxiv2025_trajworld/trajworld.png
 
   - title: "iVideoGPT: Interactive VideoGPTs are Scalable World Models"
