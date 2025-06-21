@@ -10,7 +10,10 @@ In the summer of 2023, I joined [THUML](https://github.com/thuml) under the supe
 
 My research aims to develop general algorithms that empower agents to learn efficiently in sequential, interactive, and dynamic environments. Currently, I am particularly excited about exploring effective deep learning methods for physical scene understanding and general-purpose world modeling.
 
+<span style="color:red">I am applying for a PhD position in 2026 Fall.</span> Please drop me an email if you are interested in my research or just want to chat!
+
 ## News
+- **[June. 2025]** Honored to receive **SenseTime Scholarship**!
 - **[May. 2025]** TrajWorld is accepted by **ICML 2025**!
 - **[Dec. 2024]** Our team was honored to receive **Grand Prize (Top Award)** in Student Academic Training Program, Tsinghua University **(5/1852)**!
 - **[Dec. 2024]** Honored to receive **Outstanding Poster Award** in Student Academic Research Advancement Program of Tsinghua University **(36/357)**.
@@ -31,6 +34,7 @@ My research aims to develop general algorithms that empower agents to learn effi
     Selected Courses: _Students Research Training(A+), Artificial Neural Networks(A+), Principles of Signal Processing(A+), Abstract Algebra(A+), Discrete Mathematics(A+), Measures and Integrals(A), Complex Analysis(A)_
 
 ## Honors & Awards 
+- **[2025]** SenseTime Scholarship
 - **[2024]** Grand Prize (Top Award), Student Academic Training Program, Tsinghua University (5/1852)
 - **[2024]** Outstanding Poster Award, Student Academic Research Advancement Program, Tsinghua University (36/357)
 - **[2024]** Comprehensive Excellence Award of Tsinghua University
