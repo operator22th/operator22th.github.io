@@ -8,6 +8,8 @@ main:
     code: https://github.com/thuml/RLVR-World
     page: https://thuml.github.io/RLVR-World/
     image: ./assets/pub/arxiv2025_rlvr-world/rlvr_world.png
+    research_question: "How can we train world models to better serve downstream tasks, beyond mere transition modeling?"
+    key_features: RLVR training; strong improvements on language and video world models across text games, web navigation, and **robot manipulation**.
 
   - title: "Trajectory World Models for Heterogeneous Environments"
     authors: <strong>Shaofeng Yin*</strong>, Jialong Wu*, Siqiao Huang, Xingjian Su, Xu He, Jianye Hao, Mingsheng Long
@@ -17,6 +19,8 @@ main:
     pdf: https://arxiv.org/pdf/2502.01366
     code: https://github.com/thuml/TrajWorld
     image: ./assets/pub/arxiv2025_trajworld/trajworld.png
+    research_question: "How can we build generalizable sensor-based world models across diverse environments?"
+    key_features: pretrained proprioceptive world model; single model for all robots; strong transferability; significant improvements in  MPC and OPE on **locomotion** tasks.
 
   - title: "iVideoGPT: Interactive VideoGPTs are Scalable World Models"
     authors: Jialong Wu*, <strong>Shaofeng Yin*</strong>, Ningya Feng, Xu He, Dong Li, Jianye Hao, Mingsheng Long
@@ -26,3 +30,5 @@ main:
     code: https://github.com/thuml/iVideoGPT
     page: https://thuml.github.io/iVideoGPT/
     image: ./assets/pub/nips2024_ivideogpt/ivideogpt.png
+    research_question: "How can we leverage the advancements in scalable video generative models for developing interactive visual world models?"
+    key_features: pretrained visual world model; unified model for diverse robot arms; strong transferability; high efficiency; significant improvements across MPC and MBRL on **manipulation** tasks.

@@ -8,7 +8,7 @@ I am currently a senior undergraduate at [Tsinghua University](https://www.tsing
 
 In the summer of 2023, I joined [THUML](https://github.com/thuml), working with [Prof. Mingsheng Long](http://ise.thss.tsinghua.edu.cn/~mlong/). In the summer of 2024, I began a research internship at [Lecar Lab](https://lecar-lab.github.io/), under the guidance of [Prof. Guanya Shi](https://www.gshi.me/). I am now visiting the [Stanford Vision and Learning Lab](https://svl.stanford.edu/), adviced by [Prof. Jiajun Wu](https://jiajunwu.com/) and [Prof. C. Karen Liu](https://engineering.stanford.edu/people/karen-liu).
 
-My current research interests lie in deep learning for physical scene understanding, generalizable world modeling, humanoid control, and robotic manipulation.
+My current research interests lie in deep learning for **generalizable world modeling**, **humanoid control**, and **robotic manipulation**.
 
 <span style="color:red">I am applying for a PhD position in 2026 Fall.</span> Please drop me an email if you are interested in my research or just want to chat!
 
