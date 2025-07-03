@@ -19,9 +19,8 @@
       <div class="title"><a href="{{ link.pdf }}">{{ link.title }}</a></div>
       <div class="author">{{ link.authors }}</div>
       <div class="periodical"><em>{{ link.conference }}</em></div>
-      <div class="research question">{{ link.research_question }}</div>
-      <div class="key features">{{ link.key_features }}
-      </div>
+      <div class="research-question" style="font-size: 85%;">{{ link.research_question }}</div>
+      <div class="key-features" style="font-size: 85%;">{{ link.key_features }}</div>
     <div class="links">
       {% if link.pdf %} 
       <a href="{{ link.pdf }}" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">PDF</a>
