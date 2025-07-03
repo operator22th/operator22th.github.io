@@ -13,7 +13,7 @@ My research aims to develop general algorithms that empower agents to learn effi
 <span style="color:red">I am applying for a PhD position in 2026 Fall.</span> Please drop me an email if you are interested in my research or just want to chat!
 
 ## News
-- **[June. 2025]** Honored to receive **SenseTime Scholarship**!
+- **[June. 2025]** Honored to receive **SenseTime Scholarship** (Top 30 undergraduates in China)!
 - **[May. 2025]** TrajWorld is accepted by **ICML 2025**!
 - **[Dec. 2024]** Our team was honored to receive **Grand Prize (Top Award)** in Student Academic Training Program, Tsinghua University **(5/1852)**!
 - **[Dec. 2024]** Honored to receive **Outstanding Poster Award** in Student Academic Research Advancement Program of Tsinghua University **(36/357)**.
