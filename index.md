@@ -20,12 +20,6 @@ My current research interests lie in deep learning for **generalizable world mod
 - **[Sept. 2024]** 🌏 [iVideoGPT](https://thuml.github.io/iVideoGPT/) is accepted by **NeurIPS 2024**!
 - **[May. 2024]** I became a member of <img src="/assets/img/spark.png" width="20" height="20" style="vertical-align: text-top; margin-right: 0px"> <span style="color: #FF8C00">_Sparking Program_</span>, the most prestigious and selective academic organization for students at Tsinghua University **(top 1% in university)**.
 
-{% include_relative _includes/publications.md %}
-
-{% include_relative _includes/experience.md %}
-
-{% include_relative _includes/projects.md %}
-
 ## Education
 
 - **B.S. in Information and Computing Science**, Tsinghua University, 2022-2026 (_expected_)\\
@@ -33,6 +27,12 @@ My current research interests lie in deep learning for **generalizable world mod
     **GPA:** 3.95/4.00, **Rank:** 1/30.\\
     **Selected Courses:** <code style="font-size: 0.75em; display: block; margin-left: 1.5em; margin-top: 0.5em; color: gray;">
     Numerical Analysis <span style="color: Maroon;">(A+)</span>, Students Research Training <span style="color: Maroon;">(A+)</span>, Artificial Neural Networks <span style="color: Maroon;">(A+)</span>, Principles of Signal Processing <span style="color: Maroon;">(A+)</span>,    Abstract Algebra <span style="color: Maroon;">(A+)</span>, Discrete Mathematics <span style="color: Maroon;">(A+)</span>, Mathematical Programming <span style="color: orange;">(A)</span>, Introduction to Machine Learning <span style="color: orange;">(A)</span>, Measures and Integrals <span style="color: orange;">(A)</span>, Complex Analysis <span style="color: orange;">(A)</span>
+
+{% include_relative _includes/publications.md %}
+
+{% include_relative _includes/experience.md %}
+
+{% include_relative _includes/projects.md %}
 
 ## Honors & Awards 
 - **[2025]** SenseTime Scholarship
