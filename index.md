@@ -28,9 +28,9 @@ My current research interests lie in deep learning for **generalizable world mod
     **Selected Courses:** <code style="font-size: 0.75em; display: block; margin-left: 1.5em; margin-top: 0.5em; color: gray;">
     Numerical Analysis <span style="color: Maroon;">(A+)</span>, Students Research Training <span style="color: Maroon;">(A+)</span>, Artificial Neural Networks <span style="color: Maroon;">(A+)</span>, Principles of Signal Processing <span style="color: Maroon;">(A+)</span>,    Abstract Algebra <span style="color: Maroon;">(A+)</span>, Discrete Mathematics <span style="color: Maroon;">(A+)</span>, Mathematical Programming <span style="color: orange;">(A)</span>, Introduction to Machine Learning <span style="color: orange;">(A)</span>, Measures and Integrals <span style="color: orange;">(A)</span>, Complex Analysis <span style="color: orange;">(A)</span>
 
-{% include_relative _includes/publications.md %}
-
 {% include_relative _includes/experience.md %}
+
+{% include_relative _includes/publications.md %}
 
 {% include_relative _includes/projects.md %}
 
