@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>TWIST</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="icon" type="image/png" sizes="512x512" href="images/logo.png">
+
+    <meta property="og:type" content="website"/>
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:url" content="https://humanoid-teleop.github.io"/>
+    <meta property="og:title" content="TWIST"/>
+    <meta property="og:description" content="Teleoperated Whole-Body Imitation System"/>
+
+    <!-- twitter card -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="TWIST"/>
+    <meta name="twitter:description"
+          content="Teleoperated Whole-Body Imitation System"/>
+    <meta name="twitter:creator" content="@ZeYanjie"/>
+
+    <!-- extra metadata for Slack unfurls -->
+    <!--    <meta name="twitter:label1" content="Published at"/>-->
+    <!--    <meta name="twitter:data1" content="RSS 2024"/>-->
+    <!--    <meta name="twitter:label2" content="Reading time"/>-->
+    <!--    <meta name="twitter:data2" content="10 minutes"/>-->
+
+    <!-- extra metadata — unknown support -->
+    <meta property="og:type" content="article"/>
+    <meta property="article:section" content="Research"/>
+    <meta property="article:tag" content="Robotics"/>
+    <meta property="article:tag" content="Machine Learning"/>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+<body>
+    <div class="floating-header">
+        <div class="header-title"><a href="https://humanoid-teleop.github.io" style="text-decoration: none; color: inherit;">TWIST</a></div>
+        <div class="header-links">
+            <!-- <a href="#teaser">Cover</a> 
+            <a href="#team">Team</a> -->
+            <a href="#whole-body-manipulation">Whole-Body Manip</a>
+            <a href="#legged-manipulation">Legged Manip</a>
+            <a href="#locomotion">Locomotion</a>
+            <a href="#expressive-motion">Expressive</a>
+            <a href="#system">System</a>
+            <a href="#finding">Findings</a>
+            <a href="#failures">Failures</a>
+            <a href="#q&a">Q & A</a>
+            <a href="#related">Related</a>
+        </div>
+    </div>
+
+<div class="full-page-image" id="teaser">
+    <div id="video_grid_1" class="video_grid">
+        <div class="video_large_1 video_container">
+            <div class="loading-spinner"></div>
+            <video id="teaserVideo" autoplay muted playsinline>
+                <source id="teaserSource" src="" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    <div class="video-overlay">
+        <h1 style="font-size: 8.0em;">TWIST</h1>
+        <h2>Teleoperated Whole-Body Imitation System</h2>
+        
+        <!-- <h3><b>Disclaimer:</b> All videos are <b><a href="https://en.wikipedia.org/wiki/Teleoperation" style="color: white;">teleoperation</a></b></h3> -->
+        <div class="button-container">
+            <a href="http://arxiv.org/abs/2505.02833" target="_blank" class="button">
+                <i class="fas fa-file-alt"></i> arXiv
+            </a>
+            <!-- <a href="" target="_blank" class="button">
+                <i class="fas fa-file-pdf"></i> Paper
+            </a> -->
+            <a href="https://github.com/YanjieZe/TWIST" target="_blank" class="button">
+                <i class="fab fa-github"></i> Code
+            </a>
+            <a href="https://x.com/ZeYanjie/status/1919779536461561860" target="_blank" class="button">
+                <i class="fab fa-x-twitter"></i> Twitter
+            </a>
+            <a href="https://youtu.be/QgA7jNoiIZo" target="_blank" class="button">
+                <i class="fab fa-youtube"></i> YouTube
+            </a>
+            <a href="https://www.bilibili.com/video/BV1DfVWzTEss/?share_source=copy_web&vd_source=c76e3ab14ac3f7219a9006b96b4b0f76" target="_blank" class="button">
+                <i class="fab fa-bilibili"></i> Bilibili
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<div class="title_left">
+    
+
+    <!-- <h1>TWIST<br>Teleoperated Whole-Body Imitation System</h1> -->
+    
+    <!-- <div class="author-container">
+        <div class="author-name"><a href="https://yanjieze.com/" target="_blank">Yanjie Ze<sup>*</sup></a></div>
+        <div class="author-name"><a href="https://zixuan417.github.io/" target="_blank">Zixuan Chen<sup>*</sup></a></div>
+        <div class="author-name"><a href="https://jaraujo98.github.io/" target="_blank">João Pedro Araújo<sup>*</sup></a></div>
+        <div class="author-name"><a href="https://zi-ang-cao.github.io/">Zi-ang Cao<sup></sup></a></div>
+    </div>
+    <div class="author-container">
+        <div class="author-name"><a href="https://xbpeng.github.io/" target="_blank">Xue Bin Peng<sup></sup></a></div>
+        <div class="author-name"><a href="https://jiajunwu.com/" target="_blank">Jiajun Wu<sup>†</sup></a></div>
+        <div class="author-name"><a href="https://tml.stanford.edu/" target="_blank">C. Karen Liu<sup>†</sup></a></div>
+    </div> -->
+
+    <div id="abstract">
+        <div class="video_container">
+            <div class="publication-video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/QgA7jNoiIZo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+            </div>
+        </div>
+        <!-- <div class="video_container_wrapper1">
+            <div class="video_container">
+                <video loop autoplay muted playsinline preload="metadata" controls loading="lazy">
+                    <source src="videos/teaser_video/teaser_short.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div> -->
+    </div>
+    
+    <h3 id="team">Team</h3>
+
+    <div class="team-container">
+        <!-- First Row - 4 members -->
+        <div class="team-member">
+            <a href="https://yanjieze.com" target="_blank">
+                <img src="images/yanjie.jpg" alt="Yanjie Ze" loading="lazy">
+                <div class="member-name">Yanjie Ze<sup>1*</sup></div>
+            </a>
+        </div>
+        
+        <div class="team-member">
+            <a href="https://zixuanchen.com" target="_blank">
+                <img src="images/zixuan.jpg" alt="Zixuan Chen" loading="lazy">
+                <div class="member-name">Zixuan Chen<sup>2*</sup></div>
+            </a>
+        </div>
+        
+        <div class="team-member">
+            <a href="https://jaraujo98.github.io/" target="_blank">
+                <img src="images/joao.jpeg" alt="João Pedro Araújo" loading="lazy">
+                <div class="member-name">João Pedro<br> Araújo<sup>1*</sup></div>
+            </a>
+        </div>
+        
+        <div class="team-member">
+            <a href="https://zi-ang-cao.github.io/" target="_blank">
+                <img src="images/ziang.png" alt="Zi-ang Cao" loading="lazy">
+                <div class="member-name">Zi-ang Cao<sup>1</sup></div>
+            </a>
+        </div>
+    </div>
+
+    <div class="team-container second-row">
+        <!-- Second Row - 3 members -->
+        <div class="team-member">
+            <a href="https://xbpeng.github.io/" target="_blank">
+                <img src="images/jason.png" alt="Xue Bin Peng" loading="lazy">
+                <div class="member-name">Xue Bin Peng<sup>2</sup></div>
+            </a>
+        </div>
+        
+        <div class="team-member">
+            <a href="https://jiajunwu.com/" target="_blank">
+                <img src="images/jiajun.jpg" alt="Jiajun Wu" loading="lazy">
+                <div class="member-name">Jiajun Wu<sup>1†</sup></div>
+            </a>
+        </div>
+        
+        <div class="team-member">
+            <a href="https://tml.stanford.edu/" target="_blank">
+                <img src="images/karen.png" alt="C. Karen Liu" loading="lazy">
+                <div class="member-name">C. Karen Liu<sup>1†</sup></div>
+            </a>
+        </div>
+        
+        
+    </div>
+
+    <!-- <div class="affiliation-notes">
+        <p><sup>1</sup> Stanford University &nbsp;&nbsp;<sup>2</sup> Simon Fraser University &nbsp;&nbsp;
+        <sup>*</sup> Equal contribution &nbsp;&nbsp;<sup>†</sup> Equal advising</p>
+    </div> -->
+    <div class="affiliation">
+        <p style="text-align: center;">
+            <img src="images/affliation.png" alt="logo" class="centered-image" width="40%">
+        </p>
+    </div>
+
+    
+
+
+</div>
+
+
+
+
+
+
+<hr class="rounded">
+
+
+<div id="overview">
+
+
+    <h1>Versatile, Coordinated, Whole-Body Skills</h1>
+
+   
+
+    <h1 id="whole-body-manipulation">Whole-Body Manipulation</h1>
+
+    <div class="task-row">
+        <div class="task-column">
+            <div class="video_container_wrapper1">
+                <div class="video_container">
+                    <video class="content-video" muted playsinline preload="none" controls>
+                        <source src="videos/dex/dex.mp4" type="video/mp4">
+                    </video>
+                    <div class="overlay-clean">Dex Grasp</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="task-row">
+        <div class="task-column">
+            <div class="video_container_wrapper1">
+                <div class="video_container">
+                    <video class="content-video" muted playsinline preload="none" controls>
+                        <source src="videos/2x/kit7_gabage_2x.mp4" type="video/mp4">
+                    </video>
+                    <div class="overlay-clean">Upright Garbage Can 1</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-column">
+            <div class="video_container_wrapper1">
+                <div class="video_container">
+                    <video class="content-video" muted playsinline preload="none" controls>
+                        <source src="videos/2x/kit8_loco_manip_2x.mp4" type="video/mp4">
+                    </video>
+                    <div class="overlay-clean">Transport "Minions"</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="task-row">
+       
+        <div class="task-column">
+            <div class="video_container_wrapper1">
+                <div class="video_container">
+                    <video class="content-video" muted playsinline preload="none" controls>
+                        <source src="videos/2x/kit0_chair_push_2x.mp4" type="video/mp4">
+                    </video>
+                    <div class="overlay-clean">Push Chair</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-column">
+            <div class="video_container_wrapper1">
+                <div class="video_container">
+                    <video class="content-video" muted playsinline preload="none" controls>
+                        <source src="videos/2x/kit1_refrig_2x.mp4" type="video/mp4">
+                    </video>
+                    <div class="overlay-clean">Open Refrigerator</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="task-row">
+        <div class="task-column">
+            <div class="video_container_wrapper1">
+                <div class="video_container">
+                    <video class="content-video" muted playsinline preload="none" controls>
+                        <source src="videos/2x/kit4_box_2x.mp4" type="video/mp4">
+                    </video>
+                    <div class="overlay-clean">Lift Box</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-column">
+            <div class="video_container_wrapper1">
+                <div class="video_container">
+                    <video class="content-video" muted playsinline preload="none" controls>
+                        <source src="videos/2x/kit11_reachibility_2x.mp4" type="video/mp4">
+                    </video>
+                    <div class="overlay-clean">Swipe Cabinet</div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="task-row">
+        <div class="task-column">
+            <div class="video_container_wrapper1">
+                <div class="video_container">
+                    <video class="content-video" muted playsinline preload="none" controls>
+                        <source src="videos/2x/5_door_open3_2x.mp4" type="video/mp4">
+                    </video>
+                    <div class="overlay-clean">Open Door</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-column">
+            <div class="video_container_wrapper1">
+                <div class="video_container">
+                    <video class="content-video" muted playsinline preload="none" controls>
+                        <source src="videos/2x/12_pick_box_2x.mp4" type="video/mp4">
+                    </video>
+                    <div class="overlay-clean">Pick Box from Ground</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="task-row">
+        <div class="task-column">
+            <div class="video_container_wrapper1">
+                <div class="video_container">
+                    <video class="content-video" muted playsinline preload="none" controls>
+                        <source src="videos/2x/2_upright3_2x.mp4" type="video/mp4">
+                    </video>
+                    <div class="overlay-clean">Upright Garbage Can 2</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-column">
+            <div class="video_container_wrapper1">
+                <div class="video_container">
+                    <video class="content-video" muted playsinline preload="none" controls>
+                        <source src="videos/2x/3_reach_far2_2x.mp4" type="video/mp4">
+                    </video>
+                    <div class="overlay-clean">Reach Far and Swipe</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="task-row">
+        <!-- <div class="task-column">
+            <div class="video_container_wrapper1">
+                <div class="video_container">
+                    <video loop autoplay muted playsinline preload="metadata" controls loading="lazy">
+                        <source src="videos/4_pick_yellow_2x.mp4" type="video/mp4">
+                    </video>
+                    <div class="overlay-clean">Pick "Minions" from Ground</div>
+                </div>
+            </div>
+        </div> -->
+        <div class="task-column">
+            <div class="video_container_wrapper1">
+                <div class="video_container">
+                    <video class="content-video" muted playsinline preload="none" controls>
+                        <source src="videos/2x/14_push_table_2x.mp4" type="video/mp4">
+                    </video>
+                    <div class="overlay-clean">Push Table</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-column">
+            <div class="video_container_wrapper1">
+                <div class="video_container">
+                    <video class="content-video" muted playsinline preload="none" controls>
+                        <source src="videos/2x/kit13_whole_body_reach_2x.mp4" type="video/mp4">
+                    </video>
+                    <div class="overlay-clean">Extreme Reachibility</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <h1 id="legged-manipulation">Legged Manipulation</h1>
+    <div class="task-row">
+        <div class="task-column">
+            <div class="video_container_wrapper1">
+                <div class="video_container">
+                    <video class="content-video" muted playsinline preload="none" controls>
+                        <source src="videos/2x/kit5_box_with_kick_2x.mp4" type="video/mp4">
+                    </video>
+                    <div class="overlay-clean">Lift Box with Feet Kick</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-column">
+            <div class="video_container_wrapper1">
+                <div class="video_container">
+                    <video class="content-video" muted playsinline preload="none" controls>
+                        <source src="videos/2x/kit9_large_kick_1x.mp4" type="video/mp4">
+                    </video>
+                    <div class="overlay-clean">Large Kick</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="task-row">
+        <div class="task-column">
+            <div class="video_container_wrapper1">
+                <div class="video_container">
+                    <video class="content-video" muted playsinline preload="none" controls>
+                        <source src="videos/2x/1_fly_kick_2x.mp4" type="video/mp4">
+                    </video>
+                    <div class="overlay-clean">Driven Shoot</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-column">
+            <div class="video_container_wrapper1">
+                <div class="video_container">
+                    <video class="content-video" muted playsinline preload="none" controls>
+                        <source src="videos/2x/8_kick_multi_2x.mp4" type="video/mp4">
+                    </video>
+                    <div class="overlay-clean">Multiple Shoots</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="task-row">
+        <div class="task-column">
+            <div class="video_container_wrapper1">
+                <div class="video_container">
+                    <video class="content-video" muted playsinline preload="none" controls>
+                        <source src="videos/2x/15_kick_door_2x.mp4" type="video/mp4">
+                    </video>
+                    <div class="overlay-clean">Open Door with Feet</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-column">
+            <div class="video_container_wrapper1">
+                <div class="video_container">
+                    <video class="content-video" muted playsinline preload="none" controls>
+                        <source src="videos/2x/16_kick_box_2x.mp4" type="video/mp4">
+                    </video>
+                    <div class="overlay-clean">Move Box with Feet</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <h1 id="locomotion">Locomotion</h1>
+    <div class="task-row">
+        <div class="task-column">
+            <div class="video_container_wrapper1">
+                <div class="video_container">
+                    <video class="content-video" muted playsinline preload="none" controls>
+                        <source src="videos/2x/13_sidewalk_2x.mp4" type="video/mp4">
+                    </video>
+                    <div class="overlay-clean">Side-Step Walk</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-column">
+            <div class="video_container_wrapper1">
+                <div class="video_container">
+                    <video class="content-video" muted playsinline preload="none" controls>
+                        <source src="videos/2x/11_backwalk_2x.mp4" type="video/mp4">
+                    </video>
+                    <div class="overlay-clean">Walk Backwards</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="task-row">
+        <div class="task-column">
+            <div class="video_container_wrapper1">
+                <div class="video_container">
+                    <video class="content-video" muted playsinline preload="none" controls>
+                        <source src="videos/2x/10_avoid_table_2x.mp4" type="video/mp4">
+                    </video>
+                    <div class="overlay-clean">Side-Step Around Table</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-column">
+            <div class="video_container_wrapper1">
+                <div class="video_container">
+                    <video class="content-video" muted playsinline preload="none" controls>
+                        <source src="videos/2x/7_crouch_and_sidewalk_2x.mp4" type="video/mp4">
+                    </video>
+                    <div class="overlay-clean">Crouch and Side-Step Across Hole</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h1 id="expressive-motion">Expressive Motion</h1>
+    <div class="task-row">
+        <div class="task-column">
+            <div class="video_container_wrapper1">
+                <div class="video_container">
+                    <video class="content-video" muted playsinline preload="none" controls>
+                        <source src="videos/2x/kit10_boxing_4x.mp4" type="video/mp4">
+                    </video>
+                    <div class="overlay-clean">Boxing</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-column">
+            <div class="video_container_wrapper1">
+                <div class="video_container">
+                    <video class="content-video" muted playsinline preload="none" controls>
+                        <source src="videos/2x/kit12_dancing_2x.mp4" type="video/mp4">
+                    </video>
+                    <div class="overlay-clean">Dance with Human 1</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="task-row">
+      
+        <div class="task-column">
+            <div class="video_container_wrapper1">
+                <div class="video_container">
+                    <video class="content-video" muted playsinline preload="none" controls>
+                        <source src="videos/2x/kit6_dance_2x.mp4" type="video/mp4">
+                    </video>
+                    <div class="overlay-clean">Dance with Human 2</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-column">
+            <div class="video_container_wrapper1">
+                <div class="video_container">
+                    <video class="content-video" muted playsinline preload="none" controls>
+                        <source src="videos/2x/tiptoe_2x.mp4" type="video/mp4">
+                    </video>
+                    <div class="overlay-clean">Tiptoe</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="task-row">
+        <div class="task-column">
+            <div class="video_container_wrapper1">
+                <div class="video_container">
+                    <video class="content-video" muted playsinline preload="none" controls>
+                        <source src="videos/2x/0_apt_2x.mp4" type="video/mp4">
+                    </video>
+                    <div class="overlay-clean">APT Dance</div>
+                </div>
+            </div>
+        </div>
+        <div class="task-column">
+            <div class="video_container_wrapper1">
+                <div class="video_container">
+                    <video class="content-video" muted playsinline preload="none" controls>
+                        <source src="videos/2x/9_warmup_2x.mp4" type="video/mp4">
+                    </video>
+                    <div class="overlay-clean">Warm-up Exercise</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="task-row">
+        <div class="task-column">
+            <div class="video_container_wrapper1">
+                <div class="video_container">
+                    <video class="content-video" muted playsinline preload="none" controls>
+                        <source src="videos/2x/18_end_1x.mp4" type="video/mp4">
+                    </video>
+                    <div class="overlay-clean">End</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+
+
+    
+
+   
+
+    
+
+    <hr class="rounded">
+    
+    <h1 id="system" style="padding-bottom: 2vw;">Teleoperated Whole-Body Imitation System</h1>
+
+    
+    <div class="task-row">
+        <div class="task-column-large">
+            <div class="video_container_wrapper1" style="box-shadow: none;">
+                <div class="video_container">
+                    <video class="content-video" muted playsinline preload="none" controls>
+                        <source src="videos/method/method_v4_animation.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+    
+
+    <h2 id="finding">Key Finding 1: RL+BC >> RL >> BC (DAgger)</h2>
+    <!-- <p>
+        <div class="math-formula">
+
+            $$ L(\pi_{stu}) = L_{\text{RL}}(\pi_{stu}) + \lambda D_{\text{KL}}(\pi_{stu} \parallel \pi_{tea}) $$
+        </div>
+    </p> -->
+    <p>
+        Unlike <a href="https://humanoid-ai.github.io/">HumanPlus</a>, which uses single-stage RL,
+        and <a href="https://omni.human2humanoid.com/">OmniH2O</a>, which employs DAgger,
+        we find that our combined pipeline, RL+BC, achieves superior tracking accuracy and motion smoothness.
+        Pure RL approaches frequently exhibit feet sliding artifacts due to their inability to anticipate future motion goals.
+        Meanwhile, DAgger can not stably and robustly track unseen motions occasionally, due to the lack of task reward guidance like RL.
+        In summary, while <a href="https://arxiv.org/abs/2501.17161">RL demonstrates better generalization than BC</a>, the combination of both approaches yields optimal performance.
+    </p>
+    <div id="video_grid_view" style="padding-top: 1vw; padding-bottom: 1vw">
+        <div class="row_label_view">DAagger</div>
+        <div class="video_wrapper videostyle_with_border">
+            <div class="video_container videostyle_with_border_failure">
+                <video class="content-video" muted playsinline preload="none" loop playsinline loading="lazy">
+                    <source src="videos/RL+BC/bc_unseen_short.mp4" type="video/mp4">
+                </video>
+                <div class="overlay">BC cannot handle unseen motions well.</div>
+            </div>
+        </div>
+        <div class="row_label_view">RL+BC</div>
+        <div class="video_wrapper videostyle_with_border">
+            <div class="video_container videostyle_with_border_success">
+                <video class="content-video" muted playsinline preload="none" loop playsinline loading="lazy">
+                    <source src="videos/RL+BC/bc+rl_unseen_short.mp4" type="video/mp4">
+                </video>
+                <div class="overlay">RL+BC generalizes better.</div>
+            </div>
+        </div>
+    </div>
+    <div id="video_grid_view" style="padding-bottom: 2vw">
+        <div class="row_label_view">RL</div>
+        <div class="video_wrapper videostyle_with_border">
+            <div class="video_container videostyle_with_border_failure">
+                <video class="content-video" muted playsinline preload="none" loop playsinline loading="lazy">
+                    <source src="videos/RL+BC/rl_short.mp4" type="video/mp4">
+                </video>
+                <div class="overlay">RL has feet slip.</div>
+            </div>
+        </div>
+        <div class="row_label_view">RL+BC</div>
+        <div class="video_wrapper videostyle_with_border">
+            <div class="video_container videostyle_with_border_success">
+                <video class="content-video" muted playsinline preload="none" loop playsinline loading="lazy">
+                    <source src="videos/RL+BC/rl+bc_short.mp4" type="video/mp4">
+                </video>
+                <div class="overlay">RL+BC is more smooth.</div>
+            </div>
+        </div>
+    </div>
+
+
+    <h2>Key Finding 2: In-House MoCap Data Matters</h2>
+    <p>
+        We find that adding even a small set of in-house MoCap sequences—retargeted online to mimic real teleoperation—substantially reduces tracking errors on unseen motions.
+        This gain arises from two factors: (1) our in-house captures are inherently noisier and less stable, suffering from calibration drift and occlusions; and (2) our online retargeter yields less-smooth reference motions compared to the offline version.
+
+    </p>
+    <div id="video_grid_view"  style="padding-top: 1vw; padding-bottom: 2vw">
+        
+        <div class="row_label_view">w/o MoCap<br>Data</div>
+        <div class="video_wrapper videostyle_with_border">
+            <div class="video_container videostyle_with_border_failure">
+                <video class="content-video" muted playsinline preload="none" loop playsinline loading="lazy">
+                    <source src="videos/mocap_data/without_mocap.mp4" type="video/mp4">
+                </video>
+                <div class="overlay">w/o MoCap Data</div>
+            </div>
+        </div>
+        <div class="row_label_view">w/ MoCap<br>Data</div>
+        <div class="video_wrapper videostyle_with_border">
+            <div class="video_container videostyle_with_border_success">
+                <video class="content-video" muted playsinline preload="none" loop playsinline loading="lazy">
+                    <source src="videos/mocap_data/with_mocap.mp4" type="video/mp4">
+                </video>
+                <div class="overlay">w/ MoCap Data</div>
+            </div>
+        </div>
+    </div>
+    
+    
+
+    <h2>Key Finding 3: Learning to Apply Force</h2>
+    <p>
+        As the learning objective of the controller is simply motion tracking,
+        tasks requiring force exertion (<i>e.g.</i>, lifting a box) rather than reaching target positions represent out-of-distribution scenarios, causing the controller to occasionally produce jittering behaviors.
+        To enable the controller to learn to apply force, we propose to train controllers with large end-effector perturbations.
+
+    </p>
+
+    <div id="video_grid_view" style="padding-top: 1vw; padding-bottom: 2vw">
+        <div class="row_label_view">w/o EEF <br>Perturb</div>
+        <div class="video_wrapper videostyle_with_border">
+            <div class="video_container videostyle_with_border_failure">
+                <video class="content-video" muted playsinline preload="none" loop playsinline loading="lazy">
+                    <source src="videos/force/without_force2.mp4" type="video/mp4">
+                </video>
+                <div class="overlay">w/o EEF Perturb</div>
+            </div>
+        </div>
+        <div class="row_label_view">w/ EEF <br> Perturb</div>
+        <div class="video_wrapper videostyle_with_border">
+            <div class="video_container videostyle_with_border_success">
+                <video class="content-video" muted playsinline preload="none" loop playsinline loading="lazy">
+                    <source src="videos/force/with_force.mp4" type="video/mp4">
+                </video>
+                <div class="overlay">w/ EEF Perturb</div>
+            </div>
+        </div>
+    </div>
+
+    <h2>System Delay</h2>
+    <p>
+        The total teleoperation delay of our system is approximately 0.9 seconds, as measured by the video.
+        The major overhead arises from generating tracking goals (0.7 seconds), while policy inference remains efficient (0.2 seconds). Reducing this latency further will be a key focus in future improvements.
+
+    </p>
+    <div class="task-row">
+        <div class="task-column">
+            <div class="video_container_wrapper1">
+                <div class="video_container">
+                    <video class="content-video" muted playsinline preload="none" controls>
+                        <source src="videos/delay/delay.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2>TWIST is a General Framework for Diverse Embodiments</h2>
+    <p>
+        To demonstrate that TWIST functions as a general framework for diverse embodiments, we further evaluate it on Booster T1. Below we display the sim-to-sim evaluation results. The controller successfully tracks diverse motions, including arm swinging with coordinated whole-body joints, deeply crouching down, and walking.
+
+    </p>
+
+
+
+    <div class="task-row">
+        <div class="task-column-small">
+            <div class="video_container_wrapper1" style="box-shadow: none;">
+                <div class="video_container">
+                    <video class="content-video" muted playsinline preload="none" controls>
+                        <source src="videos/booster/arm.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div class="task-column-small">
+            <div class="video_container_wrapper1" style="box-shadow: none;">
+                <div class="video_container">
+                    <video class="content-video" muted playsinline preload="none" controls>
+                        <source src="videos/booster/crouch.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+        <div class="task-column-small">
+            <div class="video_container_wrapper1" style="box-shadow: none;">
+                <div class="video_container">
+                    <video class="content-video" muted playsinline preload="none" controls>
+                        <source src="videos/booster/walk.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <h2 style="padding-bottom: 2vw;">For more details, please refer to our <a href="http://arxiv.org/abs/2505.02833">paper</a>.</h2>
+
+    <hr class="rounded">
+
+   
+
+    <h1 id="failures">Failures by Overheating</h1>
+    
+    
+    <div id="video_grid_ego" style="padding-top: 1vw; padding-bottom: 2vw">
+        <!-- 1 -->
+        <div class="video_wrapper">
+            <div class="video_container videostyle_with_border">
+                <video class="content-video" muted playsinline preload="none" controls>
+                    <source src="videos/failures/0.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <!-- 2 -->
+        <div class="video_wrapper">
+            <div class="video_container videostyle_with_border">
+                <video class="content-video" muted playsinline preload="none" controls>
+                    <source src="videos/failures/1.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <!-- 3 -->
+        <div class="video_wrapper">
+            <div class="video_container videostyle_with_border">
+                <video class="content-video" muted playsinline preload="none" controls>
+                    <source src="videos/failures/2.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <!-- 4 -->
+        <div class="video_wrapper">
+            <div class="video_container videostyle_with_border">
+                <video class="content-video" muted playsinline preload="none" controls>
+                    <source src="videos/failures/3.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <!-- 5 -->
+        <div class="video_wrapper">
+            <div class="video_container videostyle_with_border">
+                <video class="content-video" muted playsinline preload="none" controls>
+                    <source src="videos/failures/4.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <!-- 6 -->
+        <div class="video_wrapper">
+            <div class="video_container videostyle_with_border ">
+                <video class="content-video" muted playsinline preload="none" controls>
+                    <source src="videos/failures/5.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <!-- 7 -->
+        <div class="video_wrapper">
+            <div class="video_container videostyle_with_border">
+                <video class="content-video" muted playsinline preload="none" controls>
+                    <source src="videos/failures/6.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <!-- 8 -->
+        <div class="video_wrapper">
+            <div class="video_container videostyle_with_border">
+                <video class="content-video" muted playsinline preload="none" controls>
+                    <source src="videos/failures/7.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+    </div>
+
+   
+    <br>
+
+    <hr class="rounded">
+
+    <h1 id="q&a">Q & A</h1>
+    <p>
+        <b>Q:</b> What is the limitation of TWIST?
+        <br>
+        <b>A:</b> 1) Visual occlusions when teleoperating; 2) no tactile feedback to know whether the robot is holding the object tightly; 3) overheating of the robot motors after 5-10 minutes of teleoperation (especially for tasks like crouching); 4) MoCap is not portable.
+    </p>
+    <p>
+        <b>Q:</b> Why is there no autonomous result?
+        <br>
+        <b>A:</b> We want to focus on building a strong whole-body teleoperation system first, as there is not such a system yet. We will study how to learn visuomotor policies next with our system.
+    </p>
+    <p>
+        <b>Q:</b> How do you pause and start the teleoperation (so that human can freely move)?
+        <br>
+        <b>A:</b> This is very essential in our real-world teleoperation. We let the teleoperator to hold a JoyStick to pause and start the teleoperation.
+    </p>
+    <p>
+        <b>Q:</b> Is there other interesting note in system design?
+        <br>
+        <b>A:</b> Adding a voice reminder in the system is quite helpful.
+    </p>
+    <p>
+        For more questions, please contact <a href="https://yanjieze.com">Yanjie Ze</a>; we will update this section accordingly.
+    </p>
+
+    <hr class="rounded">
+
+    <h1 id="related">Related Work</h1>
+
+    <div class="related-paper">
+        <div class="related-paper-image">
+            <img src="images/idp3_2.gif" alt="Paper 1 Thumbnail">
+        </div>
+        <div class="related-paper-content">
+            <div class="related-paper-title">
+                <a href="https://humanoid-manipulation.github.io" target="_blank">Generalizable Humanoid Manipulation with 3D Diffusion Policies</a>
+            </div>
+            <div class="related-paper-authors">Yanjie Ze, Zixuan Chen, Wenhao Wang, Tianyi Chen, Xialin He, Ying Yuan, Xue Bin Peng, Jiajun Wu</div>
+            <div class="related-paper-links">
+                <a href="https://arxiv.org/abs/2410.10803" target="_blank">arXiv</a> /
+                <a href="https://humanoid-manipulation.github.io" target="_blank">Project Page</a> /
+                <a href="https://github.com/YanjieZe/Improved-3D-Diffusion-Policy" target="_blank">Code (learning)</a> /
+                <a href="https://github.com/YanjieZe/Humanoid-Teleoperation" target="_blank">Code (teleop)</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <h1 id="acknowledgements">Acknowledgements</h1>
+    <p>
+        We would like to thank all members of the CogAI group and The Movement Lab from Stanford University for their support, Sirui (Eric) Chen for his help with the video shooting and real-world experiments, and Haoyu Xiong for his helpful discussions. We also thank Stanford Robotics Center for providing the experiment space and the MoCap devices.
+        
+        This work is in part supported by ONR MURI N00014-24-1-2748, NSF:FRR 2153854, Stanford HAI, and Stanford Wu-Tsai Human Performance Alliance.
+    </p>
+
+    <h1>BibTeX</h1>
+    <p class="bibtex">@article{ze2025twist,<br>
+        title={TWIST: Teleoperated Whole-Body Imitation System},<br>
+        author= {Yanjie Ze and Zixuan Chen and João Pedro Araújo and Zi-ang Cao and Xue Bin Peng and Jiajun Wu and C. Karen Liu},<br>
+        year= {2025},<br>
+        journal= {arXiv preprint arXiv:2505.02833}<br>
+        }
+    </p>
+
+
+    <!-- 中间 -->
+    <p style="text-align: center;">
+        Website modified from <a href="https://3d-diffusion-policy.github.io/">DP3</a> and <a href="https://humanoid-manipulation.github.io/">iDP3</a>.
+        <br>
+        @ 2025 <a href="https://yanjieze.com">Yanjie Ze</a>
+        <br>
+        <br>
+
+    </p>
+
+
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const bibtex = document.querySelector('#overview > .bibtex');
+        
+        if (bibtex) {
+            bibtex.addEventListener('click', function() {
+                const text = this.innerText;
+                navigator.clipboard.writeText(text).then(
+                    function() {
+                        // Create a temporary element to show "Copied!" message
+                        const message = document.createElement('div');
+                        message.textContent = 'Copied!';
+                        message.style.position = 'fixed';
+                        message.style.top = '50%';
+                        message.style.left = '50%';
+                        message.style.transform = 'translate(-50%, -50%)';
+                        message.style.padding = '10px 20px';
+                        message.style.backgroundColor = 'rgba(0,0,0,0.7)';
+                        message.style.color = 'white';
+                        message.style.borderRadius = '5px';
+                        message.style.zIndex = '1000';
+                        
+                        document.body.appendChild(message);
+                        
+                        // Remove the message after 2 seconds
+                        setTimeout(function() {
+                            document.body.removeChild(message);
+                        }, 2000);
+                    },
+                    function() {
+                        console.error('Failed to copy text');
+                    }
+                );
+            });
+        }
+    });
+
+    // List of video sources
+    const videoSources = [
+        'videos/dex/dex.mp4',
+        'videos/2x/kit9_large_kick_1x.mp4',
+        'videos/2x/kit7_gabage_2x.mp4',
+        'videos/2x/kit8_loco_manip_2x.mp4',
+        'videos/2x/kit0_chair_push_2x.mp4',
+        'videos/2x/kit1_refrig_2x.mp4',
+        'videos/2x/kit4_box_2x.mp4',
+        'videos/2x/kit11_reachibility_2x.mp4',
+        'videos/2x/5_door_open3_2x.mp4',
+        'videos/2x/12_pick_box_2x.mp4',
+        'videos/2x/2_upright3_2x.mp4',
+        'videos/2x/3_reach_far2_2x.mp4',
+        'videos/2x/14_push_table_2x.mp4',
+        'videos/2x/kit13_whole_body_reach_2x.mp4',
+        'videos/2x/kit5_box_with_kick_2x.mp4',
+        'videos/2x/1_fly_kick_2x.mp4',
+        'videos/2x/8_kick_multi_2x.mp4',
+        'videos/2x/15_kick_door_2x.mp4',
+        'videos/2x/16_kick_box_2x.mp4',
+        'videos/2x/13_sidewalk_2x.mp4',
+        'videos/2x/11_backwalk_2x.mp4',
+        'videos/2x/10_avoid_table_2x.mp4',
+        'videos/2x/7_crouch_and_sidewalk_2x.mp4',
+        'videos/2x/kit10_boxing_4x.mp4',
+        'videos/2x/kit12_dancing_2x.mp4',
+        'videos/2x/kit6_dance_2x.mp4',
+        'videos/2x/tiptoe_2x.mp4',
+        'videos/2x/0_apt_2x.mp4',
+        'videos/2x/9_warmup_2x.mp4',
+        'videos/2x/18_end_1x.mp4'
+    ];
+
+    // Function to get random video source
+    function getRandomVideo() {
+        const randomIndex = Math.floor(Math.random() * videoSources.length);
+        return videoSources[randomIndex];
+    }
+
+    // Function to play random video
+    function playRandomVideo() {
+        const video = document.getElementById('teaserVideo');
+        const source = document.getElementById('teaserSource');
+        const spinner = document.querySelector('.loading-spinner');
+        
+        // Show spinner
+        spinner.style.display = 'block';
+        
+        source.src = getRandomVideo();
+        video.load();
+        
+        // Hide spinner when video starts playing
+        video.addEventListener('playing', function() {
+            spinner.style.display = 'none';
+        }, { once: true });
+        
+        video.play();
+    }
+
+    // Play random video when current video ends
+    document.getElementById('teaserVideo').addEventListener('ended', playRandomVideo);
+
+    // Initial random video
+    playRandomVideo();
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Initialize Intersection Observer
+        const videoObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const video = entry.target;
+                    // Set autoplay when video becomes visible
+                    video.autoplay = true;
+                    video.load();
+                    // Stop observing after loading
+                    videoObserver.unobserve(video);
+                }
+            });
+        }, {
+            rootMargin: '50px 0px', // Start loading when video is 50px from viewport
+            threshold: 0
+        });
+
+        // Observe all content videos
+        document.querySelectorAll('.content-video').forEach(video => {
+            videoObserver.observe(video);
+        });
+    });
+</script>
+</body>
+
+<!-- <script src="assets/js/full_screen_video.js"></script> -->
+<!-- <script src="assets/js/carousel.js"></script> -->
+</html>
