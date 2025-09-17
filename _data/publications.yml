@@ -7,7 +7,7 @@ main:
     pdf: https://arxiv.org/pdf/2505.13934
     code: https://github.com/thuml/RLVR-World
     page: https://thuml.github.io/RLVR-World/
-    image: ./assets/pub/arxiv2025_rlvr-world/RLVR.gif
+    image: ./assets/pub/arxiv2025_rlvr-world/RLVR_fast.gif
     research_question: <strong>Research question:</strong> How can we train world models to better serve downstream tasks, beyond mere transition modeling?
     key_features: <strong>Key features:</strong> RLVR training; strong improvements on language and video world models across text games, web navigation, and <strong>robot manipulation</strong>.
 
