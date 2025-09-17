@@ -11,7 +11,7 @@
     {% if link.image %} 
   <img src="{{ link.image }}" 
       class="teaser img-fluid z-depth-1" 
-      style="max-width:120px; width:100%; height:auto;">
+      style="max-width:300x; width:100%; height:auto;">
     {% if link.conference_short %} 
     <abbr class="badge">{{ link.conference_short }}</abbr>
     {% endif %}
