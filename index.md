@@ -13,6 +13,7 @@ My current research interests lie in deep learning for **generalizable world mod
 <span style="color:red">I am applying for a PhD position in 2026 Fall.</span> Please drop me an email if you are interested in my research or just want to chat!
 
 ## News
+- **[Sept. 2025]** 🌏 [RLVR-World](https://thuml.github.io/RLVR-World/) is accepted by **NeurIPS 2025**!
 - **[June. 2025]** Honored to receive **SenseTime Scholarship** (Top 30 undergraduates in China)!
 - **[May. 2025]** 📈 [TrajWorld](https://arxiv.org/abs/2502.01366) is accepted by **ICML 2025**!
 - **[Dec. 2024]** Our team was honored to receive **Grand Prize (Top Award)** in Student Academic Training Program, Tsinghua University **(5/1852)**!

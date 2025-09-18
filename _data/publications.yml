@@ -1,8 +1,8 @@
 main:
   - title: "RLVR-World: Training World Models with Reinforcement Learning"
     authors: Jialong Wu, <strong>Shaofeng Yin</strong>, Ningya Feng, Mingsheng Long
-    conference_short: arXiv
-    conference: arXiv preprint, 2025.
+    conference_short: Neurlps
+    conference: Conference on Neural Information Processing Systems <strong>(Neurlps)</strong>, 2025.
     arxiv: https://arxiv.org/abs/2505.13934
     pdf: https://arxiv.org/pdf/2505.13934
     code: https://github.com/thuml/RLVR-World
