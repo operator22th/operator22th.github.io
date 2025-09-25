@@ -1,6 +1,16 @@
 main:
+  - title: "VisualMimic: Visual Humanoid Loco-Manipulation via Motion Tracking and Generation"
+    authors: <strong>Shaofeng Yin*</strong>, Yanjie Ze*, Hong-Xing Yu, C. Karen Liu†, Jiajun Wu†
+    conference_short: arxiv
+    conference: arxiv, 2025.
+    arxiv: https://arxiv.org/abs/2509.20322
+    pdf: https://arxiv.org/pdf/2509.20322
+    code: https://github.com/visualmimic/VisualMimic
+    page: https://visualmimic.github.io/
+    image: ./assets/pub/arxiv2025_visualmimic/kick_ball.gif
+  
   - title: "RLVR-World: Training World Models with Reinforcement Learning"
-    authors: Jialong Wu, <strong>Shaofeng Yin</strong>, Ningya Feng, Mingsheng Long
+    authors: Jialong Wu, <strong>Shaofeng Yin</strong>, Ningya Feng, Mingsheng Long†
     conference_short: Neurlps
     conference: Conference on Neural Information Processing Systems <strong>(Neurlps)</strong>, 2025.
     arxiv: https://arxiv.org/abs/2505.13934
@@ -12,7 +22,7 @@ main:
     key_features: <strong>Key features:</strong> RLVR training; strong improvements on language and video world models across text games, web navigation, and <strong>robot manipulation</strong>.
 
   - title: "Trajectory World Models for Heterogeneous Environments"
-    authors: <strong>Shaofeng Yin*</strong>, Jialong Wu*, Siqiao Huang, Xingjian Su, Xu He, Jianye Hao, Mingsheng Long
+    authors: <strong>Shaofeng Yin*</strong>, Jialong Wu*, Siqiao Huang, Xingjian Su, Xu He, Jianye Hao, Mingsheng Long†
     conference_short: ICML
     conference: International Conference on Machine Learning (<strong>ICML</strong>), 2025.
     arxiv: https://arxiv.org/abs/2502.01366
@@ -23,7 +33,7 @@ main:
     key_features: <strong>Key features:</strong> pretrained proprioceptive world model; single model for all robots; strong transferability; significant improvements in  MPC and OPE on <strong>locomotion</strong> tasks.
 
   - title: "iVideoGPT: Interactive VideoGPTs are Scalable World Models"
-    authors: Jialong Wu*, <strong>Shaofeng Yin*</strong>, Ningya Feng, Xu He, Dong Li, Jianye Hao, Mingsheng Long
+    authors: Jialong Wu*, <strong>Shaofeng Yin*</strong>, Ningya Feng, Xu He, Dong Li, Jianye Hao, Mingsheng Long†
     conference_short: Neurlps
     conference: Conference on Neural Information Processing Systems <strong>(Neurlps)</strong>, 2024.
     pdf: https://arxiv.org/pdf/2405.15223.pdf
