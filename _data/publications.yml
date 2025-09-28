@@ -8,6 +8,8 @@ main:
     code: https://github.com/visualmimic/VisualMimic
     page: https://visualmimic.github.io/
     image: ./assets/pub/arxiv2025_visualmimic/kick_ball.gif
+    research_question: <strong>Research question:</strong> How can we develop a sim-to-real visual whole-body control framework for humanoid loco-manipulation?
+    key_features: <strong>Key features:</strong> Visuomotor policies; Whole-body dexterity; In-the-wild deployment.
   
   - title: "RLVR-World: Training World Models with Reinforcement Learning"
     authors: Jialong Wu, <strong>Shaofeng Yin</strong>, Ningya Feng, Mingsheng Long†
