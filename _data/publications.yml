@@ -41,6 +41,6 @@ main:
     pdf: https://arxiv.org/pdf/2405.15223.pdf
     code: https://github.com/thuml/iVideoGPT
     page: https://thuml.github.io/iVideoGPT/
-    image: ./assets/pub/nips2024_ivideogpt/oxe-standford-maskvit-14.gif
+    image: ./assets/pub/nips2024_ivideogpt/oxe-standford-maskvit-14.mov
     research_question: <strong>Research question:</strong> How can we leverage the advancements in scalable video generative models for developing interactive visual world models?
     key_features: <strong>Key features:</strong> pretrained visual world model; unified model for diverse robot arms; strong transferability; high efficiency; significant improvements across MPC and MBRL on <strong>manipulation</strong> tasks.
