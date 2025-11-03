@@ -1,8 +1,8 @@
 main:
   - title: "VisualMimic: Visual Humanoid Loco-Manipulation via Motion Tracking and Generation"
     authors: <strong>Shaofeng Yin*</strong>, Yanjie Ze*, Hong-Xing Yu, C. Karen Liu†, Jiajun Wu†
-    conference_short: arxiv
-    conference: arxiv, 2025.
+    conference_short: In submission
+    # conference: arxiv, 2025.
     arxiv: https://arxiv.org/abs/2509.20322
     pdf: https://arxiv.org/pdf/2509.20322
     code: https://github.com/visualmimic/VisualMimic
