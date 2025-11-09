@@ -18,6 +18,9 @@ My current research interests lie in **humanoid control**, **generalizable world
 
 {% include_relative _includes/experience.md %}
 
+## Invited Talks
+- **VisualMimic** at [Amazon Frontier AI & Robotics (FAR)](https://www.aboutamazon.com/news/company-news/amazon-covariant-ai-robots), Nov. 6, 2025. [Slides](files/VisualMimic_1106.pdf).
+
 <!-- ## News
 - **[Sept. 2025]** 🌏 [RLVR-World](https://thuml.github.io/RLVR-World/) is accepted by **NeurIPS 2025**!
 - **[June. 2025]** Honored to receive **SenseTime Scholarship** (Top 30 undergraduates in China)!
