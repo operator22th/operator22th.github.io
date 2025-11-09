@@ -14,12 +14,12 @@ My current research interests lie in **humanoid control**, **generalizable world
 
 <span style="color:red">I am applying for a PhD position in 2026 Fall.</span> Please drop me an email if you are interested in my research or just want to chat!
 
+## Invited Talks
+- **VisualMimic** at [Amazon Frontier AI & Robotics (FAR)](https://www.aboutamazon.com/news/company-news/amazon-covariant-ai-robots), Nov. 6, 2025. [Slides](assets/files/VisualMimic_1106.pdf)
+
 {% include_relative _includes/publications.md %}
 
-{% include_relative _includes/experience.md %}
-
-## Invited Talks
-- **VisualMimic** at [Amazon Frontier AI & Robotics (FAR)](https://www.aboutamazon.com/news/company-news/amazon-covariant-ai-robots), Nov. 6, 2025. [Slides](files/VisualMimic_1106.pdf).
+{% include_relative _includes/experience.md %}.
 
 <!-- ## News
 - **[Sept. 2025]** 🌏 [RLVR-World](https://thuml.github.io/RLVR-World/) is accepted by **NeurIPS 2025**!
