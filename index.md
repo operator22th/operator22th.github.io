@@ -43,7 +43,7 @@ My current research interests lie in **humanoid control**, **generalizable world
 ## Education
 
 - **B.S. in Information and Computing Science**, Tsinghua University, 2022-2026 (_expected_)\\
-    [Zhili College](https://www.zlc.tsinghua.edu.cn/), [Tsinghua University](https://www.tsinghua.edu.cn/en/)\\
+    [Zhili College](https://www.zlc.tsinghua.edu.cn/EN/en.htm), [Tsinghua University](https://www.tsinghua.edu.cn/en/)\\
     **GPA:** 3.95/4.00, **Major GPA:** <span style="color:red">4.00/4.00</span>, **Major Rank:** <span style="color:red">1/30</span>.\\
     **Selected Courses:** <code style="font-size: 0.75em; display: block; margin-left: 1.5em; margin-top: 0.5em; color: gray;">
     Numerical Analysis <span style="color: Maroon;">(A+)</span>, Students Research Training <span style="color: Maroon;">(A+)</span>, Artificial Neural Networks <span style="color: Maroon;">(A+)</span>, Principles of Signal Processing <span style="color: Maroon;">(A+)</span>,    Abstract Algebra <span style="color: Maroon;">(A+)</span>, Discrete Mathematics <span style="color: Maroon;">(A+)</span>, Mathematical Programming <span style="color: orange;">(A)</span>, Introduction to Machine Learning <span style="color: orange;">(A)</span>, Measures and Integrals <span style="color: orange;">(A)</span>, Complex Analysis <span style="color: orange;">(A)</span>
