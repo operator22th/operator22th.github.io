@@ -8,14 +8,18 @@ I am currently a senior undergraduate at [Tsinghua University](https://www.tsing
 
 <!-- In the summer of 2023, I joined [THUML](https://github.com/thuml), working with [Prof. Mingsheng Long](http://ise.thss.tsinghua.edu.cn/~mlong/). In the summer of 2024, I began a research internship at [Lecar Lab](https://lecar-lab.github.io/), under the guidance of [Prof. Guanya Shi](https://www.gshi.me/). I am now visiting the [Stanford Vision and Learning Lab](https://svl.stanford.edu/), adviced by [Prof. Jiajun Wu](https://jiajunwu.com/) and [Prof. C. Karen Liu](https://engineering.stanford.edu/people/karen-liu). -->
 
-In terms of academic performance, I have maintained an average GPA of 3.95, ranking **first** in my major. I began my research under the supervision of Prof. [Prof. Mingsheng Long](http://ise.thss.tsinghua.edu.cn/~mlong/), focusing on world modeling. In the summer of 2024, I interned at [Lecar Lab](https://lecar-lab.github.io/) at Carnegie Mellon University, advised by [Prof. Guanya Shi](https://www.gshi.me/), where I worked on model-based reinforcement learning and planning algorithm. I am currently visiting the [Stanford Vision and Learning Lab](https://svl.stanford.edu/), adviced by [Prof. Jiajun Wu](https://jiajunwu.com/) and [Prof. C. Karen Liu](https://engineering.stanford.edu/people/karen-liu), working on humanoid control.
+<!-- In terms of academic performance, I have maintained an average GPA of 3.95, ranking **first** in my major. I began my research under the supervision of Prof. [Prof. Mingsheng Long](http://ise.thss.tsinghua.edu.cn/~mlong/), focusing on world modeling. In the summer of 2024, I interned at [Lecar Lab](https://lecar-lab.github.io/) at Carnegie Mellon University, advised by [Prof. Guanya Shi](https://www.gshi.me/), where I worked on model-based reinforcement learning and planning algorithm. I am currently visiting the [Stanford Vision and Learning Lab](https://svl.stanford.edu/), adviced by [Prof. Jiajun Wu](https://jiajunwu.com/) and [Prof. C. Karen Liu](https://engineering.stanford.edu/people/karen-liu), working on humanoid control. -->
+
+In terms of academic performance, I have maintained an average GPA of 4.0, ranking **first** in my major. I began my research under the supervision of Prof. [Prof. Mingsheng Long](http://ise.thss.tsinghua.edu.cn/~mlong/), focusing on world modeling. I am currently visiting the [Stanford Vision and Learning Lab](https://svl.stanford.edu/), adviced by [Prof. Jiajun Wu](https://jiajunwu.com/) and [Prof. C. Karen Liu](https://engineering.stanford.edu/people/karen-liu), working on humanoid control.
 
 My current research interests lie in **humanoid control**, **generalizable world modeling**, and **robotic manipulation**. I aim to build robust primitive skills for humanoids through sim-to-real reinforcement learning or by leveraging human data, and then integrate these skills with planning to accomplish complex tasks.
 
 <span style="color:red">I am applying for a PhD position in 2026 Fall.</span> Please drop me an email if you are interested in my research or just want to chat!
 
 ## Invited Talks
-- **VisualMimic** at [Amazon Frontier AI & Robotics (FAR)](https://www.aboutamazon.com/news/company-news/amazon-covariant-ai-robots), Nov. 6, 2025. [Slides](assets/files/VisualMimic_1106.pdf)
+- **Visual Humanoid Loco-manipulation via Motion Tracking and Generation** at [Amazon Frontier AI & Robotics (FAR)](https://www.aboutamazon.com/news/company-news/amazon-covariant-ai-robots), Nov. 6, 2025. [Slides](assets/files/VisualMimic_1106.pdf)
+- **Visual Humanoid Loco-manipulation via Motion Tracking and Generation** at [RoboPapers](https://x.com/RoboPapers), Oct. 31, 2025. [Slides](assets/files/VisualMimic_1106.pdf)
+- **World Models in Robotics: An Exploratory Perspective** at [Zhili Seminar](https://www.zlc.tsinghua.edu.cn/EN/en.htm), Mar. 16, 2025.
 
 {% include_relative _includes/publications.md %}
 
