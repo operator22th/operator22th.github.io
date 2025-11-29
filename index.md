@@ -19,7 +19,7 @@ My current research interests lie in **humanoid control**, **generalizable world
 ## Invited Talks
 - **Visual Humanoid Loco-manipulation via Motion Tracking and Generation** at [Amazon Frontier AI & Robotics (FAR)](https://www.aboutamazon.com/news/company-news/amazon-covariant-ai-robots), Nov. 6, 2025. [Slides](assets/files/VisualMimic_1106.pdf)
 - **Visual Humanoid Loco-manipulation via Motion Tracking and Generation** at [RoboPapers](https://x.com/RoboPapers), Oct. 31, 2025. [Slides](assets/files/VisualMimic_1106.pdf)
-- **World Models in Robotics: An Exploratory Perspective** at [Zhili Seminar](https://www.zlc.tsinghua.edu.cn/EN/en.htm), Mar. 16, 2025.
+- **World Models in Robotics: An Exploratory Perspective** at [Zhili Seminar](https://www.zlc.tsinghua.edu.cn/EN/en.htm), Mar. 16, 2024.
 
 {% include_relative _includes/publications.md %}
 
