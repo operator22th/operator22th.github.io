@@ -18,6 +18,7 @@ main:
     arxiv: https://arxiv.org/abs/2502.01366
     pdf: https://arxiv.org/pdf/2502.01366
     code: https://github.com/thuml/TrajWorld
+    page: https://arxiv.org/abs/2502.01366
     image: ./assets/pub/arxiv2025_trajworld/trajworld.png
     # research_question: <strong>Research question:</strong> How can we build generalizable sensor-based world models across diverse environments?
     # key_features: <strong>Key features:</strong> pretrained proprioceptive world model; single model for all robots; strong transferability; significant improvements in  MPC and OPE.
