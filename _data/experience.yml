@@ -4,11 +4,11 @@ main:
     description: "Research Intern"
     time: "Feb. 2025 - Now"
     page: https://svl.stanford.edu/
-  # - title: "LeCAR Lab, CMU Robotics Institute"
-  #   image: ./assets/exp/lecar.png
-  #   description: "Research Intern"
-  #   time: "July - Aug. 2024"
-  #   page: https://lecar-lab.github.io/
+  - title: "LeCAR Lab, CMU Robotics Institute"
+    image: ./assets/exp/lecar.png
+    description: "Research Intern"
+    time: "July - Aug. 2024"
+    page: https://lecar-lab.github.io/
   - title: "THUML, Tsinghua University"
     image: ./assets/exp/thuml.png
     description: "Research Intern"
